@@ -1,5 +1,8 @@
 # DATA606 - Capstone Project
-## Introduction
+
+## ChequeChecker - HandWritten Text Recognition
+
+### Introduction
 
 The world has been digitalized to a great extent and yet there are few sensitive areas where we are forced to use traditional methods. Bank cheques are one of them. Most of the financial transactions are done by a paper cheque all over the world. When these handwritten bank cheques are in play there is also a scope for manual errors. These manual errors could be costly and could save a lot of money if this problem is addressed.
 
