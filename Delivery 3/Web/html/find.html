@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Hand Written Text Detection Application</title>
+
+<!-- bs4 css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+<!-- TensorFlow.js script -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+
+<!-- canvas script -->
+<script src="{{ url_for('static', filename="js/fabric.js")}}"></script>
+
+<!-- main script -->
+<script src="{{ url_for('static', filename="js/main.js")}}"> </script>
+
+<!-- main css -->
+<link rel = "stylesheet" href="{{ url_for('static', filename="css/main.css")}}">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#"><h2>Write any word, I will try to detect!</h2></a>
+  
+  </nav>
+<div class="container-fluid">
+<blockquote class="blockquote text-justify" style="margin:30px;">
+ <!----------------------->
+  </blockquote>
+</div>
+
+<div class="row">
+  <div class="col" style ='margin-left:100px;'>
+    <h4 id ='status' >Loading Model... </h4>
+    <canvas id="canvas" width="400" height="300" class="canvas" style="border:1px solid #b9bfc9;margin-top:25px;"></canvas>
+
+      <div class="btn-group" style = 'margin-top:40px; '>
+      <button type="button" class="btn btn-outline-primary" onclick ='erase()' style ='margin-left:10px;' disabled>Clear</button>
+      <button type="button" class="btn btn-outline-primary" onclick ='download_image_display()' style ='margin-left:10px;' disabled>Detect</button>
+
+  </div>
+  <div>
+     <h2 id="responseId"></h2>
+  </div>
+
+
+
+    </div>
+</div>
+
+<div class="col">
+    <div class="column" id="x" ></div>
+</div>
+
+</body>
+<!--<script src="{{ url_for('static', filename="js/pie.js")}}"></script>-->
+<script>
+	console.log('starting');
+	start('en')
+</script>
+</html>
